@@ -4,6 +4,13 @@ from discord.ext import commands
 import time,calendar,os,json,discord,requests
 from fuzzywuzzy import fuzz
 activators=['->tb ','->tb']
+from stackifyapm.contrib.flask import StackifyAPM
+app = Flask(...)
+StackifyAPM(app)
+app.config['APPLICATION_NAME'] = 'Python Application'
+app.config['ENVIRONMENT'] = 'Production'
+
+StackifyAPM(app)
 client = commands.Bot(command_prefix=activators)
 traindex = []
 
