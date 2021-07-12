@@ -110,9 +110,8 @@ async def leave(ctx):
 @client.command(brief="About me",aliases=["about"])
 async def info(ctx):
   embed=discord.Embed(title="About me!",colour=discord.Colour(0x990033))
-  me= ctx.message.guild.get_member(int(os.getenv("ME")))
   botid=ctx.message.guild.get_member(int(os.getenv("BOTID")))
-  embed.set_author(name="Developer", url="https://discordapp.com/users/{}".format(int(os.getenv("ME"))), icon_url=me.avatar_url)
+  embed.set_author(name="Developer", url="https://discordapp.com/users/{}".format(int(os.getenv("ME"))))
   embed.add_field(name="Owner:",value="Nurglwe#8387")
   await ctx.channel.send(embed=embed)
 
