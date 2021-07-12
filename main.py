@@ -1,7 +1,8 @@
 import keepalive
 #No touch above
 from discord.ext import commands
-import time,calendar,os,json,discord,requests,flask
+import time,calendar,os,json,discord,requests
+from flask import Flask
 from fuzzywuzzy import fuzz
 activators=['->tb ','->tb']
 from stackifyapm.contrib.flask import StackifyAPM
