@@ -6,7 +6,7 @@ from flask import Flask
 from fuzzywuzzy import fuzz
 activators=['->tb ','->tb']
 from stackifyapm.contrib.flask import StackifyAPM
-app = Flask(...)
+app = Flask(__name__)
 StackifyAPM(app)
 app.config['APPLICATION_NAME'] = 'Python Application'
 app.config['ENVIRONMENT'] = 'Production'
