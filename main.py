@@ -5,16 +5,6 @@ import time,calendar,os,json,discord,requests
 from flask import Flask
 from fuzzywuzzy import fuzz
 activators=['->tb ','->tb']
-from stackifyapm.contrib.flask import StackifyAPM
-import stackify
-logger = stackify.getLogger(application="polarisdemo", environment="Production", api_key="0Oz1Gj6Vh2Ih1Vz2Vf1Fv7Tw1Rp2Ri0Cn0Ww0Lz")
-logger.warning('Something happened')
-app = Flask(__name__)
-StackifyAPM(app)
-app.config['APPLICATION_NAME'] = 'Python Application'
-app.config['ENVIRONMENT'] = 'Production'
-
-StackifyAPM(app)
 client = commands.Bot(command_prefix=activators)
 traindex = []
 
